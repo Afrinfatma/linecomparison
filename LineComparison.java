@@ -8,15 +8,15 @@ public class LineComparison {
 		DecimalFormat decForm=new DecimalFormat("0.##");
 		
 		System.out.println("please enter x1 coordinates");
-		double x1=scan.nextDouble();
-		System.out.println("please enter x2 coordinates");
-		double x2=scan.nextDouble();
-		System.out.println("please enter x3 coordinates");
-		double x3=scan.nextDouble();
+		double x1 =scan.nextDouble();
 		System.out.println("please enter y1 coordinates");
 		double y1=scan.nextDouble();
+		System.out.println("please enter x2 coordinates");
+		double x2=scan.nextDouble();
 		System.out.println("please enter y2 coordinates");
 		double y2=scan.nextDouble();
+		System.out.println("please enter x3 coordinates");
+		double x3=scan.nextDouble();
 		System.out.println("please enter y3 coordinates");
 		double y3=scan.nextDouble();
 		System.out.println("please enter x4 coordinates");
@@ -31,13 +31,21 @@ public class LineComparison {
 		System.out.println("The distance between the line1 :" +decForm.format(distance1));
 		System.out.println("The distance between the line2 :" +decForm.format(distance2));
 		
-		if (distance1.equals(distance2)) {
-			System.out.println("line are equal");
-		}
-		else {
-				System.out.println("lines are not equal");
-			}
+		
+		int compareValue = distance1.compareTo(distance2);
+		  
+        if (compareValue == 0) {
+            System.out.println("distance1 and distance2 are equal");
+        }
+        else if (compareValue < 0) {
+            System.out.println("distance1 is less than distance2");
+        }
+        else {
+            System.out.println("distance1 is greater than distance2");
+    }
+}
+			
 		}
 		
 	
-	}
+	
