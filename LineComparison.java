@@ -2,7 +2,7 @@ package com.bridgelabz.linecomparison;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 public class LineComparison {
-	public static void main(String[] args){
+    public static int lineComparison() {
 	   
 		Scanner scan=new Scanner(System.in);
 		DecimalFormat decForm=new DecimalFormat("0.##");
@@ -24,8 +24,6 @@ public class LineComparison {
 		System.out.println("please enter y4 coordinates");
 		double y4=scan.nextDouble();
 		
-		
-		scan.close();
 		Double distance1=Math.sqrt(Math.pow(x2-x1,2)+(Math.pow(y2-y1,2)));
 		Double distance2=Math.sqrt(Math.pow(x4-x3,2)+(Math.pow(y4-y3,2)));
 		System.out.println("The distance between the line1 :" +decForm.format(distance1));
@@ -43,9 +41,15 @@ public class LineComparison {
         else {
             System.out.println("distance1 is greater than distance2");
     }
+       return 0;
+    }
+        public static void main(String[] args){
+       
+          lineComparison();
+        }
 }
 			
-		}
+		
 		
 	
 	
